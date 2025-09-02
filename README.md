@@ -37,4 +37,4 @@ Contribuições são bem-vindas! Se você tiver sugestões, ideias para melhoria
 
 **Autor e contato**
 
-Eric Dala Porta, gmail: ericdasilvadalaporta@gmail.com
+Eric Dala Porta, ericdasilvadalaporta@gmail.com
