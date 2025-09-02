@@ -35,8 +35,6 @@ Se você deseja explorar ou modificar o código localmente, siga estes passos si
 
 Contribuições são bem-vindas! Se você tiver sugestões, ideias para melhorias ou encontrar algum bug, sinta-se à vontade para abrir uma _issue_ ou enviar um _pull request_.
 
----
-
 **Autor e contato**
 
 Eric Dala Porta, gmail: ericdasilvadalaporta@gmail.com
