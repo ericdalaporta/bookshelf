@@ -1,6 +1,6 @@
 # Bookshelf
 
-O **Bookshelf** é uma plataforma digital moderna e minimalista, criada para disponibilizar livros gratuitamente para quem se interessa por literatura. A bookshelf é um projeto sem fins lucrativos, criado unicamente para fins recreativos, o design é original, simples e intuitivo.
+O **Bookshelf** é uma plataforma digital moderna e minimalista, criada para disponibilizar livros gratuitamente para quem se interessa por literatura. A bookshelf é um projeto sem fins lucrativos, criada unicamente para fins recreativos, o design é original, simples e intuitivo.
 
 ![Prévia do Site Bookshelf](assets/read.png)
 
