@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Inscreva-se no Bookshelf para receber novidades e acesso a um mundo de livros." />
+  <title>Inscrição - Bookshelf</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Lora:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Junte-se ao Bookshelf</h1>
+      <p>Preencha os dados abaixo e comece sua jornada literária com nosso projeto gratuito.</p>
+    </div>
+    <div class="theme-switcher">
+      <i class="ph ph-sun"></i>
+      <label class="switch">
+        <input type="checkbox" id="dark-mode-toggle">
+        <span class="slider round"></span>
+      </label>
+      <i class="ph ph-moon"></i>
+    </div>
+  </header>
+
+  <main class="form-page-main">
+    <form id="form-inscricao" class="inscricao-form animate-on-scroll">
+      <h2>Cadastre-se para Novidades</h2>
+      <p style="margin-bottom: 1.5rem;">Receba recomendações personalizadas e ajude-nos a disponibilizarmos mais livros
+        gratuitamente.</p>
+      <label for="nome">Nome completo</label>
+      <input type="text" id="nome" name="nome" required placeholder="Seu nome completo" />
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com" />
+      <label for="motivo">O que te motiva a ler?</label>
+      <textarea id="sobre" name="motivo" rows="5"
+        placeholder="Compartilhe um pouco sobre seus interesses de leitura..."></textarea>
+      <div id="contador" style="text-align: right; font-size: 0.8rem; opacity: 0.7;">Caracteres: 0</div>
+      <button type="submit">Enviar Inscrição</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">Bookshelf</div>
+    <p class="footer-slogan">Descubra novos mundos, uma página de cada vez.</p>
+    <div class="footer-social-icons">
+      <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+      <a href="#" aria-label="Twitter"><i class="ph-fill ph-twitter-logo"></i></a>
+      <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+    </div>
+    <div class="footer-links">
+      <a href="#">Política de Privacidade</a>
+      <span>&middot;</span>
+      <a href="#">Termos de Uso</a>
+      <span>&middot;</span>
+      <a href="#">Contato</a>
+    </div>
+    <p class="footer-copyright">&copy; 2025 Bookshelf. Todos os direitos reservados.</p>
+  </footer>
+
+  <button id="back-to-top" title="Voltar ao topo"><i class="ph-bold ph-arrow-up"></i></button>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
