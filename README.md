@@ -2,6 +2,8 @@
 
 O **Bookshelf** é uma plataforma digital moderna e minimalista, criada para disponibilizar livros gratuitamente para quem se interessa por literatura. A bookshelf é um projeto sem fins lucrativos, criado unicamente para fins recreativos, o design é original, simples e intuitivo.
 
+![Prévia do Site Bookshelf](assets/read.png)
+
 ## Funcionalidades Principais
 
 * **Design Responsivo:** A interface se adapta a diferentes tamanhos de tela, garantindo uma ótima experiência em dispositivos móveis.
