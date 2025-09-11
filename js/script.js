@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
 function handleDarkMode() {
     const toggle = document.getElementById('dark-mode-toggle');
     if (!toggle) return;
+    const switchSound = new Audio('https://www.soundjay.com/switch/switch-1.mp3');
+    switchSound.volume = 0.3;
 
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme === 'dark') {
@@ -22,6 +24,8 @@ function handleDarkMode() {
     }
 
     toggle.addEventListener('change', function () {
+        switchSound.currentTime = 0;
+        switchSound.play();
         if (this.checked) {
             document.body.classList.add('dark-mode');
             localStorage.setItem('theme', 'dark');
@@ -123,9 +127,8 @@ function displayBooks(books, container) {
     container.innerHTML = books.map((book, index) => `
     <div class="book-card animate-on-scroll" style="--card-index: ${index};">
       <div class="book-card-image-container">
-        <img src="${book.cover}" alt="Capa do livro ${book.title}" class="book-card-image">
-        <a href="#" class="book-card-read-link">Ler</a>
-      </div>
+        <img src="${book.cover}" alt="Capa do livro ${book.title}" class="book-card-image" loading="lazy">
+<a href="${book.readLink}" class="book-card-read-link" target="_blank" rel="noopener noreferrer">Ler</a>      </div>
       <div class="book-card-content">
         <h3 class="book-card-title">${book.title}</h3>
         <p class="book-card-author">${book.author}</p>
@@ -175,3 +178,24 @@ function initializeForm() {
         atualizarContador();
     });
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+
+    const toggle = document.getElementById('dark-mode-toggle');
+    if (toggle) {
+        toggle.checked = theme === 'dark';
+        toggle.addEventListener('change', () => {
+            if (toggle.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    }
+});
