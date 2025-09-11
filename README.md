@@ -1,13 +1,13 @@
 # Bookshelf
 
-O **Bookshelf** é uma plataforma digital moderna e minimalista, criada para disponibilizar livros gratuitamente do gosto do criador para quem se interessa por literatura. A bookshelf é um projeto sem fins lucrativos, criada unicamente por diversão com design é original, simples e criativo.
+O Bookshelf é uma plataforma digital moderna e minimalista, criada por um entusiasta da literatura com o objetivo de compartilhar livros de seu acervo pessoal. Mais do que um projeto sem fins lucrativos, é uma iniciativa de paixão, focada em um design original, simples e criativo para oferecer uma experiência de leitura acessível e agradável a todos.
 
 ![Prévia 2](assets/PREVIA2.png)
 
 ## Funcionalidades Principais
 
 * **Design Responsivo:** A interface se adapta a diferentes tamanhos de tela, garantindo uma ótima experiência em dispositivos móveis.
-* **Tema Claro e Escuro:** Alterne facilmente entre os modos de visualização para maior conforto, especialmente em ambientes de pouca luz.
+* **Tema Claro e Escuro:** Alterne facilmente entre os modos de visualização para maior conforto, o design muda junto.
 * **Animações e Transições:** Efeitos visuais suaves nos botões e nos cards de livros tornam a navegação mais dinâmica e agradável.
 * **Catálogo de Livros Interativo:** Uma grade organizada de cards de livros que, ao passar o mouse, revela uma opção para leitura, reforçando a proposta de ser uma biblioteca digital acessível.
 
@@ -37,4 +37,4 @@ Contribuições são bem-vindas! Se você tiver sugestões, ideias para melhoria
 
 **Autor e contato**
 
-Eric Dala Porta, ericdasilvadalaporta@gmail.com
+Eric Dala Porta, ericdasilvadalaporta@gmail.com  😀
