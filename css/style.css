@@ -173,23 +173,42 @@ input:checked+.slider:before {
 }
 
 .cta-button {
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary), #1a1a1a);
   border: 2px solid transparent;
   border-radius: 9999px;
   color: var(--color-surface);
   display: inline-block;
   margin: 2rem auto;
-  padding: 1rem 2rem;
+  padding: 1.25rem 2.5rem;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
 }
 
 .cta-button:hover {
-  transform: translateY(-3px);
-  background-color: var(--color-secondary);
+  transform: translateY(-5px) scale(1.05);
+  background: linear-gradient(135deg, var(--color-secondary), #2563eb);
   color: white;
+  box-shadow: 0 10px 25px rgba(67, 171, 246, 0.4);
+}
+
+.cta-button:hover::before {
+  left: 100%;
 }
 
 .genres {
@@ -210,21 +229,43 @@ input:checked+.slider:before {
   display: block;
   text-align: center;
   background-color: var(--color-secondary);
-  border: 1px solid var(--color-secondary);
+  border: 2px solid var(--color-secondary);
   border-radius: 9999px;
   color: white;
   padding: 0.8rem 1.5rem;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.genre>a::before,
+.see-more>a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+  z-index: -1;
 }
 
 .genre>a:hover,
 .see-more>a:hover {
-  background-color: var(--color-primary);
   color: var(--color-surface);
   border-color: var(--color-primary);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px var(--shadow-color);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(67, 171, 246, 0.4);
+}
+
+.genre>a:hover::before,
+.see-more>a:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .genre>a.active {
@@ -244,17 +285,20 @@ input:checked+.slider:before {
 
 .book-card {
   background-color: var(--color-surface);
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 15px var(--shadow-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+  border: 1px solid transparent;
+  position: relative;
 }
 
 .book-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px var(--shadow-color);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(67, 171, 246, 0.15), 0 15px 35px var(--shadow-color);
 }
 
 .book-card-image-container {
@@ -262,6 +306,7 @@ input:checked+.slider:before {
   width: 100%;
   height: 300px;
   background-color: var(--color-background);
+  overflow: hidden;
 }
 
 .book-card-image {
@@ -276,41 +321,62 @@ input:checked+.slider:before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.7);
+  background: linear-gradient(135deg, var(--color-secondary), #2563eb);
   color: white;
   padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
+  border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(67, 171, 246, 0.4);
 }
 
 .book-card:hover .book-card-image {
-  filter: blur(4px);
-  transform: scale(1.05);
+  filter: blur(3px) brightness(0.7);
+  transform: scale(1.1);
 }
 
 .book-card:hover .book-card-read-link {
   opacity: 1;
   visibility: visible;
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
 .book-card-content {
   padding: 1.5rem;
   flex-grow: 1;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.book-card:hover .book-card-content {
+  padding-top: 2rem;
 }
 
 .book-card-title {
   color: var(--color-primary);
   margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.book-card:hover .book-card-title {
+  color: var(--color-secondary);
 }
 
 .book-card-author {
   color: var(--color-text-light);
   font-size: 0.9rem;
+  transition: color 0.3s ease;
+  font-style: italic;
+}
+
+.book-card:hover .book-card-author {
+  color: var(--color-text);
 }
 
 .form-page-main {
@@ -350,19 +416,39 @@ input:checked+.slider:before {
 }
 
 .inscricao-form button {
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary), #1a1a1a);
   color: var(--color-surface);
-  border: none;
-  padding: 1rem;
+  border: 2px solid transparent;
+  padding: 1.25rem;
   font-size: 1.1rem;
   border-radius: 9999px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+}
+
+.inscricao-form button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
 }
 
 .inscricao-form button:hover {
-  background-color: var(--color-secondary);
+  background: linear-gradient(135deg, var(--color-secondary), #2563eb);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(67, 171, 246, 0.3);
+}
+
+.inscricao-form button:hover::before {
+  left: 100%;
 }
 
 .site-footer {
@@ -393,12 +479,19 @@ input:checked+.slider:before {
 .footer-social-icons a {
   color: var(--color-text-light);
   font-size: 1.8rem;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid transparent;
 }
 
 .footer-social-icons a:hover {
   color: var(--color-secondary);
-  transform: translateY(-3px);
+  transform: translateY(-5px) scale(1.15);
+  background-color: rgba(67, 171, 246, 0.1);
+  border-color: var(--color-secondary);
+  box-shadow: 0 4px 15px rgba(67, 171, 246, 0.3);
 }
 
 .footer-links {
@@ -482,21 +575,54 @@ body.dark-mode {
   --color-text: #e0e0e0;
   --color-text-light: #a0a0a0;
   --color-border: #2c2c2c;
-  --shadow-color: rgba(255, 255, 255, 0.05);
+  --shadow-color: rgba(255, 255, 255, 0.1);
   animation: none;
   background-color: #000000 !important;
   background-image: none !important;
 }
 
+body.dark-mode .book-card:hover {
+  box-shadow: 0 25px 50px rgba(67, 171, 246, 0.2), 0 15px 35px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .cta-button {
+  background: linear-gradient(135deg, var(--color-primary), #f0f0f0);
+  color: #000000;
+}
+
+body.dark-mode .cta-button:hover {
+  background: linear-gradient(135deg, var(--color-secondary), #2563eb);
+  color: white;
+}
+
+body.dark-mode .inscricao-form button {
+  background: linear-gradient(135deg, var(--color-primary), #f0f0f0);
+  color: #000000;
+}
+
+body.dark-mode .inscricao-form button:hover {
+  background: linear-gradient(135deg, var(--color-secondary), #2563eb);
+  color: white;
+}
+
 .feature-image-wrapper {
   display: grid;
   place-items: center;
+  position: relative;
 }
 
 .light-mode-image,
 .dark-mode-image {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
+  width: 100%;
+  height: auto;
+  position: relative;
+  transform: translateY(0);
+}
+
+.dark-mode-image {
+  transform: translateY(-2px);
 }
 
 body:not(.dark-mode) .light-mode-image {
