@@ -23,7 +23,8 @@ Se você deseja explorar ou modificar o código localmente, siga estes passos si
 
 1.  Clone o repositório para sua máquina:
     ```bash
-    git clone [https://github.com/ericdalaporta/bookshelf.git](https://github.com/ericdalaporta/bookshelf.git)
+    git clone https://github.com/ericdalaporta/bookshelf.git
+
     ```
 2.  Navegue até a pasta do projeto:
     ```bash
